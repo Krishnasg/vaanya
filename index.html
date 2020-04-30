@@ -279,6 +279,7 @@
             e.preventDefault();
             var values = $(this).serialize();
             fetch("https://infinite-thicket-43042.herokuapp.com/email/krishnamurthy.sg77@gmail.com", {
+                    mode: 'no-cors',
                     method: "post",
                     headers: {
                         'Accept': 'application/json',
