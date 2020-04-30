@@ -3,6 +3,11 @@
     padding: 0;
 }
 
+body {
+    font-family: 'Roboto', serif;
+    font-size: 48px;
+}
+
 
 /*------------Navigation------------*/
 
@@ -13,7 +18,7 @@ header {
 }
 
 main {
-    background-color: #fafafa;
+    background-color: #e3f2fd;
 }
 
 .banner-container {
@@ -37,13 +42,14 @@ main {
 }
 
 .hero-text button:hover {
-    background-color: #555;
+    background-color: #e3f2fd;
     color: white;
 }
 
 .company-name {
     padding-left: 28px;
     padding-top: 4px;
+    color: white;
 }
 
 .margin-bottom-8 {
@@ -59,7 +65,7 @@ hr {
 }
 
 nav {
-    background-color: #e1f5fe !important;
+    background-color: #007bff !important;
 }
 
 .navbar-brand img {
@@ -78,7 +84,7 @@ nav {
 }
 
 header ul li a:hover {
-    color: #007bff!important;
+    color: #000 !important;
 }
 
 .navbar {
@@ -90,7 +96,7 @@ header ul li a:hover {
 }
 
 .nav-link {
-    color: #555!important;
+    color: #fff!important;
     font-weight: 600;
     font-size: 16px;
 }
@@ -120,7 +126,7 @@ header ul li a:hover {
     padding-top: 50px;
     padding-bottom: 50px;
     color: #555;
-    background-color: #fafafa;
+    background-color: #e3f2fd;
 }
 
 #about .btn {
@@ -138,7 +144,7 @@ header ul li a:hover {
 #customerfeedback {
     padding-top: 20px;
     padding-bottom: 20px;
-    background-color: #fafafa;
+    background-color: #e3f2fd;
 }
 
 #customerfeedback .row {
@@ -207,7 +213,7 @@ blockquote::after {
 /*---------------------Get in Touch--------------------------*/
 
 #contact {
-    background: #efefef;
+    background-color: #e3f2fd;
     padding-top: 40px;
     padding-bottom: 40px;
     color: #777;
@@ -236,7 +242,7 @@ blockquote::after {
 /*--------------Footer--------*/
 
 #footer {
-    background-color: #333;
+    background-color: #007bff !important;
     color: #fff;
     padding: 12px;
 }
