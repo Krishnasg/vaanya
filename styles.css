@@ -238,6 +238,18 @@ blockquote::after {
     font-weight: bold;
 }
 
+#gallery img {
+    max-height: 260px;
+    max-width: 260px;
+    min-height: 260px;
+    min-width: 260px;
+}
+
+#gallery_images img {
+    max-height: 640px !important;
+    min-height: 640px !important;
+}
+
 
 /*--------------Footer--------*/
 
