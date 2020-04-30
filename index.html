@@ -247,7 +247,7 @@
                             </div>
                             <button id="submit" type="submit" class="btn-primary">SEND MESSAGE</button>
                             <div class="hide alert alert-success" role="alert">
-                                You will recieve a reply from Vaanya Interior shortly! Thank you
+                                You will recieve a reply from us shortly! Thank you
                             </div>
                             <div class="hide alert alert-danger" role="alert">
                                 Unable to send your query, please contact using the phone Number
@@ -307,30 +307,30 @@
         $('.contact-form').submit(function(e) {
             e.preventDefault();
             $('#submit').attr('enabled', false);
+            var msg = $('#submit').text();
+            $('#submit').text('SENDING...');
             var values = $(this).serialize();
-            fetch("https://infinite-thicket-43042.herokuapp.com/email/krishnamurthy.sg77@gmail.com", {
-                    mode: 'no-cors',
-                    method: "post",
-                    headers: {
-                        'Accept': 'application/json',
-                        "Content-Type": "application/x-www-form-urlencoded"
-                    },
-                    body: values
-                })
-                .then(r => r.json().then(data => ({
-                    status: r.status,
-                    body: data
-                })))
-                .then(obj => {
-                    console.log(obj)
-                        // if (json.status == 'OK') {
-                        //     $('.alert-success').removeClass('hide');
-                        //     $('.alert-danger').addClass('hide');
-                        // } else {
-                        //     $('.alert-success').addClass('hide');
-                        //     $('.alert-danger').removeClass('hide');
-                        // }
-                });
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    $('#submit').attr('enabled', true);
+                    $('#submit').text(msg);
+                    var result = JSON.parse(this.responseText);
+                    if (result.status == 'OK') {
+                        $('.alert-success').removeClass('hide');
+                        $('.alert-danger').addClass('hide');
+                    } else {
+                        $('.alert-success').addClass('hide');
+                        $('.alert-danger').removeClass('hide');
+                    }
+                    setTimeout(function() {
+                        $('.alert-success').addClass('hide');
+                        $('.alert-danger').addClass('hide');
+                    }, 10000);
+                }
+            };
+            xhttp.open("POST", "https://infinite-thicket-43042.herokuapp.com/email/krishnamurthy.sg77@gmail.com", true);
+            xhttp.send();
         });
 
         $('.gallery-image').click(function(e) {
