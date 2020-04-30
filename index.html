@@ -278,8 +278,7 @@
         $('.contact-form').submit(function(e) {
             e.preventDefault();
             var values = $(this).serialize();
-            const proxyurl = "";
-            fetch(proxyurl + "https://peaceful-shore-54287.herokuapp.com/email/krishnamurthy.sg77@gmail.com", {
+            fetch("https://infinite-thicket-43042.herokuapp.com/email/krishnamurthy.sg77@gmail.com", {
                     method: "post",
                     headers: {
                         'Accept': 'application/json',
