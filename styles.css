@@ -160,6 +160,18 @@ header ul li a:hover {
     background-color: #efefef;
 }
 
+.contact-lable {
+    font-size: 1.2em;
+}
+
+.contact-info .row {
+    margin-bottom: 4px;
+}
+
+.contact-lable-info {
+    font-size: 1em;
+}
+
 .profile img {
     top: -60px;
     position: absolute;
