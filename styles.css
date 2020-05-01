@@ -65,7 +65,7 @@ hr {
 }
 
 nav {
-    background-color: #007bff !important;
+    background-color: #ff9933 !important;
 }
 
 .navbar-brand img {
@@ -163,8 +163,10 @@ header ul li a:hover {
 .profile img {
     top: -60px;
     position: absolute;
-    left: 60px;
+    left: 88px;
     border: 10px solid #fff;
+    height: 200px;
+    width: 200px;
 }
 
 .profile h3 {
@@ -184,23 +186,21 @@ blockquote {
 }
 
 blockquote::before {
-    content: '\93';
-    font-size: 50px;
+    content: '“';
+    font-size: 30px;
     color: #007bff;
     position: relative;
     line-height: 20px;
-    bottom: -15px;
-    right: 5px;
+    bottom: -4px;
 }
 
 blockquote::after {
-    content: '\94';
-    font-size: 50px;
+    content: '„';
+    font-size: 30px;
     color: #007bff;
     position: relative;
-    line-height: 10px;
-    bottom: -15px;
-    left: 5px;
+    line-height: 20px;
+    top: -8px;
 }
 
 .profile:hover {
@@ -213,7 +213,7 @@ blockquote::after {
 /*---------------------Get in Touch--------------------------*/
 
 #contact {
-    background-color: #e3f2fd;
+    background-color: #EEEEEE;
     padding-top: 40px;
     padding-bottom: 40px;
     color: #777;
@@ -245,6 +245,21 @@ blockquote::after {
     min-width: 260px;
 }
 
+.map-container-6 {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+}
+
+.map-container-6 iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
 #gallery_images img {
     max-height: 640px !important;
     min-height: 640px !important;
@@ -254,7 +269,7 @@ blockquote::after {
 /*--------------Footer--------*/
 
 #footer {
-    background-color: #007bff !important;
+    background-color: #ff9933 !important;
     color: #fff;
     padding: 12px;
 }
